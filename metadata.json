@@ -1,0 +1,6 @@
+{
+  "name": "AdPulse Paid Social Auditor",
+  "description": "Senior Performance Marketing Data Analyst workbench for Meta Ads and TikTok Ads schema normalization, weighted-average funnel diagnostics, creative image analysis, and multi-turn AI strategy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

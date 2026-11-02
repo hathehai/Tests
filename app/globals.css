@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-sans: 'Public Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .font-mono, .tabular-nums {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Markdown report table & prose styling */
+.audit-markdown h2 {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #1e293b;
+}
+
+.audit-markdown h2:first-child {
+  margin-top: 0;
+}
+
+.audit-markdown h3 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.audit-markdown p {
+  color: #cbd5e1;
+  line-height: 1.65;
+  margin-bottom: 0.75rem;
+  font-size: 0.9375rem;
+}
+
+.audit-markdown ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+  color: #cbd5e1;
+}
+
+.audit-markdown li {
+  margin-bottom: 0.375rem;
+  line-height: 1.6;
+  font-size: 0.9375rem;
+}
+
+.audit-markdown strong {
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+.audit-markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.25rem 0;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.8125rem;
+}
+
+.audit-markdown th {
+  background-color: #0f172a;
+  color: #94a3b8;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid #1e293b;
+  white-space: nowrap;
+}
+
+.audit-markdown td {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #1e293b;
+  color: #e2e8f0;
+}
+
+.audit-markdown tr:nth-child(even) td {
+  background-color: rgba(15, 23, 42, 0.45);
+}
